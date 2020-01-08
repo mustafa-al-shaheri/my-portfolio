@@ -473,7 +473,6 @@ header li a:hover {
   }
   .project:hover{
     background:#F2F2F2;
-    
   }
   .proj-header{
     margin: 0 auto;
@@ -486,6 +485,7 @@ header li a:hover {
     background-image: url('../imgs/thumbnail.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 120px;
     width: 20%;
     margin-right: 4%;
@@ -511,12 +511,20 @@ header li a:hover {
 
 
   .proj-content{
-    max-height: 0;
+    /* max-height: 0; */
+    height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
 
 
+  .proj-content video{
+    width: 80%;
+    height: auto;
+  }
+  .proj-content a {
+    display: block;
+  }
   #works-start{
     height: 80px;
   }

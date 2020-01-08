@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function(){
           myLogo.style.left=newX+ 'px';
           topLayer.style.width= clientX +  'px';
         }
-        console.log(newX,window.innerWidth)
+        
         myLogo.style.cursor='grabbing'
       }
     
@@ -168,12 +168,12 @@ for (let i = 0; i < projHeader.length; i++) {
   projHeader[i].addEventListener("click", function() {
     this.classList.toggle("active-proj");
     let content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (content.offsetHeight){
+      content.style.height = "0";
       if(window.innerWidth>=768)
       this.parentNode.style.width='45%';
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.height = "auto";
       this.parentNode.style.width='96%';
     } 
   });
