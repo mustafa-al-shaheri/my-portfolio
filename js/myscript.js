@@ -171,10 +171,10 @@ for (let i = 0; i < projHeader.length; i++) {
     if (content.offsetHeight){
       content.style.height = "0";
       if(window.innerWidth>=768)
-      this.parentNode.style.width='45%';
+      this.parentNode.style.width='48%';
     } else {
       content.style.height = "auto";
-      this.parentNode.style.width='96%';
+      this.parentNode.style.width='98%';
     } 
   });
 }

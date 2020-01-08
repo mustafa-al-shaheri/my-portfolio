@@ -460,26 +460,35 @@ header li a:hover {
     font-family: 'Courgette', cursive;
   }
   .project{
-    border-radius: 20px;
-    background: #ADA996;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 2%;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
     line-height: 1.1;
     margin: 0 1% 1% 0%;
-    width: 45%;
+    width: 48%;
     float: left;
     transition: width 0.3s ease-out;
   }
   .project:hover{
-    background:#F2F2F2;
+    
   }
   .proj-header{
     margin: 0 auto;
-    cursor: pointer;
-    text-align: left;
+    background-image: url('../imgs/thumbnail.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    /* padding: 0.5% 2% 3%; */
+    /* position: relative; */
+    /* overflow: hidden; */
+    
   }
 
+  .proj-bg{
+    
+  }
+/* 
   .thumbnail{
     float: left;
     background-image: url('../imgs/thumbnail.jpg');
@@ -491,10 +500,12 @@ header li a:hover {
     margin-right: 4%;
     border-radius: 15px 0 0 15px;
     box-shadow: 3px 0 rgba(52,58,64,1);
-  }
+  } */
+  
   .proj-details{
-    float: left;
-    width: 76%;
+    background: rgba(255,255,255,0.75);
+    padding: 1% 8% 3%;
+    border-radius: 10px;
   }
 
   .proj-details h3{
