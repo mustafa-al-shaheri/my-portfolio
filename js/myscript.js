@@ -168,6 +168,7 @@ for (let i = 0; i < projHeader.length; i++) {
   projHeader[i].addEventListener("click", function() {
     this.classList.toggle("active-proj");
     let content = this.nextElementSibling;
+    this.firstElementChild.classList.toggle("active-Proj");
     if (content.offsetHeight){
       content.style.height = "0";
       if(window.innerWidth>=768)
@@ -193,7 +194,6 @@ function worksClicked(e){
   //document.getElementById('about').style.display='none'
   document.getElementById('home').style.display='none'
   document.getElementById('logo').style.display='block'
-
 }
 
 function aboutClicked(e){
@@ -202,6 +202,7 @@ function aboutClicked(e){
 }
 
 function homeClicked(e){
+  navClicked(e);
   document.getElementById('home').style.display='block'
   document.getElementById('works').style.display='none'
   //document.getElementById('about').style.display='none'

@@ -68,6 +68,7 @@ function draw() {
    if(pressed)
    redraw();
 }
-mouseClicked = function(){
+/* mouseClicked = function(){
   pressed=!pressed
 }
+ */
