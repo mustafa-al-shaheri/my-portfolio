@@ -162,23 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
       el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
     } */
 
-let projHeader = document.getElementsByClassName("proj-header");
 
-for (let i = 0; i < projHeader.length; i++) {
-  projHeader[i].addEventListener("click", function() {
-    this.classList.toggle("active-proj");
-    let content = this.nextElementSibling;
-    this.firstElementChild.classList.toggle("active-Proj");
-    if (content.offsetHeight){
-      content.style.height = "0";
-      if(window.innerWidth>=768)
-      this.parentNode.style.width='48%';
-    } else {
-      content.style.height = "auto";
-      this.parentNode.style.width='98%';
-    } 
-  });
-}
 
 function navClicked(e){
   let activated = document.getElementsByClassName('active');

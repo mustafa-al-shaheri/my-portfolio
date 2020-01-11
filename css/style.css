@@ -340,7 +340,7 @@ header li a:hover {
   }
 
   .line1{
-    width: 18em;
+    width: 20em;
     padding-left: 12%;
   }
   
@@ -477,20 +477,27 @@ header li a:hover {
     background: white;
     
     line-height: 1.1;
-    margin: 0 1% 1% 0%;
-    width: 48%;
+    margin: 0 0.5% 1.5% 0.5%;
+    width: 49%;
     float: left;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
   }
+  .right{
+    /* float: right; */
+  }
+  .left{
+    /* float: left; */
+  }
   
   .proj-header{
     margin: 0 auto;
-    background-image: url('../imgs/thumbnail.jpg');
+    /* background-image: url('../imgs/thumbnail.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    
     /* padding: 0.5% 2% 3%; */
     /* position: relative; */
     /* overflow: hidden; */
@@ -498,8 +505,8 @@ header li a:hover {
   }
 
   .proj-header:hover .proj-details{
-    background: rgba(10,10,10,0.75);
-    color: white;
+    background: rgba(10,10,10,0.70);
+    color: white
   }
 
   .proj-header:hover h6{
@@ -524,9 +531,10 @@ header li a:hover {
   } */
   
   .proj-details{
-    background: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.85);
     padding: 1% 8% 3%;
     transition: background 0.4s ease-out;
+    height: 120px;
   }
 
   .proj-details h3{
@@ -563,8 +571,11 @@ header li a:hover {
   }
 
   .active-Proj{
-    background: rgba(10,10,10,0.75);
+    background: rgba(10,10,10,0.90);
     color: white;
+  }
+  .active-Proj:hover{
+    background: rgba(10,10,10,0.90);
   }
   .active-Proj h6{
       background: #A9E5BB;
@@ -577,7 +588,7 @@ header li a:hover {
 
   /*       --------- works ----------         */
   .project{
-    width: 98%;
+    width: 99%;
   }
   
 
