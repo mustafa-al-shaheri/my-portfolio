@@ -470,6 +470,7 @@ header li a:hover {
     color: #999;
     font-family: 'Fira Code', monospace;
     font-weight: 100;
+    margin-top: 80px;
     /* text-align: left; */
   }
   .project{
@@ -566,9 +567,9 @@ header li a:hover {
   .proj-content a {
     display: block;
   }
-  #works-start{
+ /*  #works-start{
     height: 80px;
-  }
+  } */
 
   .active-Proj{
     background: rgba(10,10,10,0.90);
@@ -581,6 +582,108 @@ header li a:hover {
       background: #A9E5BB;
       color: black;
   }
+
+
+/* ++++++++ About +++++++++ */
+.about{
+  background: #111111;
+  padding: 100px 5% 5%;
+  text-align: center;
+  display: none;
+  min-height: 100vh;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+.about h1{
+  color: #999;
+  font-family: 'Fira Code', monospace;
+  font-weight: 100;
+  /* margin-top: 80px; */
+}
+
+.main-info{
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+  text-align: left;
+  font-family: 'Fira Code', monospace;
+}
+.personal-photo{
+  float: left;
+  width: 25%;
+  margin-right: 4%;
+}
+.personal-photo img{
+  width: 100%;
+}
+.main-info-content{
+  float: left;
+  width: 71%;
+}
+.main-info-content h2{
+  color: #B9C53A;
+  margin-bottom: -10px;
+}
+
+.my-titles{
+  color: #81CFE7;
+}
+
+.main-info-content a{
+}
+
+.main-info-content a img{
+  width: 35px;
+  height: auto;
+}
+
+.about hr{
+  margin-top: 20px;
+  width: 80%;
+}
+
+#stars1{
+  animation : stars 1s steps(40) 1s infinite normal both;
+}
+
+#stars2{
+  animation : stars 1s ease-in-out 0s infinite normal both;
+}
+
+#smoke1{
+  animation : stars 4s steps(40) 1s infinite normal both;
+}
+
+#smoke2{
+  animation : stars 4s ease-in-out 0s infinite normal both;
+}
+
+@keyframes stars{
+  0%{
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+
+#laptop-light{
+display: block;
+opacity: 0;
+transition: opacity 1s;
+}
+#laptop:hover #laptop-light{
+opacity: 0.9;
+}
+
+#certificate{
+  cursor: pointer;
+}
+
+
 
 
 /* +++++++++ Media Queries +++++++++++++ */
@@ -626,3 +729,36 @@ header li a:hover {
   .st25{fill:#41EDF7;}
   .st26{opacity:0.5;fill:#42FFFF;}
   .st27{fill:#42FFFF;}
+
+
+
+/* ********** office SVG */
+
+  .aboutSVG .st0{clip-path:url(#XMLID_5_);fill:#FFFFFF;}
+	.aboutSVG .st1{opacity:0.1;fill:#FFFFFF;}
+	.aboutSVG .st2{opacity:0.07;fill:#FFFFFF;}
+	.aboutSVG .st3{fill:none;stroke:#000000;stroke-width:8.6717;stroke-miterlimit:10;}
+	.aboutSVG .st4{fill:#FFFFFF;}
+	.aboutSVG .st5{fill:url(#mainT_1_);}
+	.aboutSVG .st6{fill:#1A1A1A;}
+	.aboutSVG .st7{opacity:0.5;fill:#1A1A1A;}
+	.aboutSVG .st8{fill:#666666;}
+	.aboutSVG .st9{display:none;}
+	.aboutSVG .st10{display:inline;opacity:0.4;fill:#FFF0B3;}
+	.aboutSVG .st11{display:inline;fill:#3F8CAA;}
+	.aboutSVG .st12{display:inline;fill:#FFFFFF;}
+	.aboutSVG .st13{font-family:'Cairo-Regular';}
+	.aboutSVG .st14{font-size:43.5813px;}
+	.aboutSVG .st15{fill:#661016;}
+	.aboutSVG .st16{fill:#75494D;}
+	.aboutSVG .st17{fill:#1C1F3F;}
+	.aboutSVG .st18{fill:#163B4F;}
+	.aboutSVG .st19{fill:#CCCCCC;stroke:#4D4D4D;stroke-width:7.8048;stroke-miterlimit:10;}
+	.aboutSVG .st20{fill:#4D4D4D;}
+	.aboutSVG .st21{fill:#CCCCCC;}
+	.aboutSVG .st22{fill:none;stroke:#4D4D4D;stroke-width:5.0347;stroke-miterlimit:10;}
+	.aboutSVG .st23{opacity:0.5;fill:url(#smoke2_1_);}
+	.aboutSVG .st24{opacity:0.5;fill:url(#smoke1_1_);}
+	.aboutSVG .st25{fill:#999999;}
+	.aboutSVG .st26{fill:#0C0C0C;}
+	.aboutSVG .st27{fill:#333333;}
