@@ -173,6 +173,22 @@ header li a:hover {
     border-color: #B9C53A;
   }
 
+  .drag-icon{
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: white;
+    padding: 0 100px;
+    opacity: 0.2;
+    display: none;
+  }
+
+  .image-cropper:hover .drag-icon{
+    display: inline-block;
+  }
+
+
   /* .image-cropper img {
   height: 100%;
   width: auto;
