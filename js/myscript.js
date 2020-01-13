@@ -173,7 +173,7 @@ function navClicked(e){
 
 function worksClicked(e){
   navClicked(e);
-  if(window.innerWidth>768){
+  /* if(window.innerWidth>768){
     document.getElementById('works').style.display='block'
     document.getElementById('about').style.display='none'
     document.getElementById('home').style.display='none'
@@ -182,35 +182,27 @@ function worksClicked(e){
     document.getElementById('works').style.display='block'
     document.getElementById('about').style.display='block'
     document.getElementById('home').style.display='block'
-  }
+  } */
+  document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='none'
+    document.getElementById('home').style.display='none'
+    document.getElementById('logo').style.display='block'
   
 }
 
 function aboutClicked(e){
   navClicked(e);
-  if(window.innerWidth>768){
   document.getElementById('works').style.display='none'
   document.getElementById('about').style.display='block'
   document.getElementById('home').style.display='none'
   document.getElementById('logo').style.display='block'
-  }else{
-    document.getElementById('works').style.display='block'
-    document.getElementById('about').style.display='block'
-    document.getElementById('home').style.display='block'
-  }
 }
 
 function homeClicked(e){
   navClicked(e);
-  if(window.innerWidth>768){
-  document.getElementById('home').style.display='block'
   document.getElementById('works').style.display='none'
-  document.getElementById('about').style.display='none'
-  document.getElementById('logo').style.display='none'
-  }else{
-    document.getElementById('works').style.display='block'
-    document.getElementById('about').style.display='block'
-    document.getElementById('home').style.display='block'
-  }
+  document.getElementById('about').style.display='block'
+  document.getElementById('home').style.display='none'
+  document.getElementById('logo').style.display='block'
   
 }
