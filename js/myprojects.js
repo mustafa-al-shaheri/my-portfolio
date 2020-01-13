@@ -8,15 +8,13 @@ let projsObj = {
     ]
 }
 document.addEventListener('DOMContentLoaded', function(){
-    let projs = document.getElementById("projs")
+    let projsR = document.getElementById("projs-rt")
+    let projsL = document.getElementById("projs-lt")
 
 for(let i=0;i<projsObj.projects.length;i++){
     let newProj = document.createElement('div')
     newProj.setAttribute("class","project")
-    if(i%2==0)
-    newProj.classList.add("left")
-    else
-    newProj.classList.add("right")
+    
     let newProjHeader = document.createElement('div')
     newProjHeader.setAttribute("class","proj-header")
     newProjHeader.setAttribute("style",`background-image:url(../Projects/projs_imgs/${projsObj.projects[i].img});`)
@@ -26,7 +24,7 @@ for(let i=0;i<projsObj.projects.length;i++){
     title.textContent=projsObj.projects[i].name
     newProjDetails.appendChild(title)
     let desc = document.createElement('p')
-    desc.textContent=projsObj.projects[i].desc.slice(0,100)+`.. `
+    desc.textContent=projsObj.projects[i].desc.slice(0,50)+`.. `
     newProjDetails.appendChild(desc)
     for(let j=0;j<projsObj.projects[i].tags.length;j++){
         let tag = document.createElement('h6')
@@ -35,7 +33,6 @@ for(let i=0;i<projsObj.projects.length;i++){
     }
     newProjHeader.appendChild(newProjDetails)
     newProj.appendChild(newProjHeader)
-    projs.appendChild(newProj)
     let projContent = document.createElement('div')
     projContent.setAttribute("class","proj-content")
     projContent.innerHTML=`<hr>
@@ -48,6 +45,10 @@ for(let i=0;i<projsObj.projects.length;i++){
       <a href="https://ahmed-hassany.github.io/App-landing-page-Assignment/">App landing page</a>
       <hr>`
     newProj.appendChild(projContent)
+    if(i%2==0)
+    projsL.appendChild(newProj)
+    else
+    projsR.appendChild(newProj)
 }
 addExpandAbility()
 })
@@ -65,11 +66,8 @@ let addExpandAbility = function(){
         this.parentNode.classList.toggle("left") */
         if (content.offsetHeight){
         content.style.height = "0";
-        if(window.innerWidth>=768)
-        this.parentNode.style.width='49%';
         } else {
         content.style.height = "auto";
-        this.parentNode.style.width='99%';
         } 
         
     });

@@ -3,7 +3,7 @@ let topLayer = wrapper.querySelector('.top');
 //let bottomLayer = wrapper.querySelector('.bottom')
 let handle = wrapper.querySelector('.handle');
 let myLogo = document.querySelector(".image-cropper")
-
+let winWidth = window.innerWidth;
 document.addEventListener('DOMContentLoaded', function(){
   
   /* wrapper.addEventListener('mousemove', function(e){
@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function(){
     myLogo.style.width = winWidth/5.5 + 'px';
     myLogo.style.height = winWidth/5.5 + 'px';
     topLayer.style.width= winWidth/2 +  'px';
-
   }
 
 
@@ -174,25 +173,44 @@ function navClicked(e){
 
 function worksClicked(e){
   navClicked(e);
-  document.getElementById('works').style.display='block'
-  document.getElementById('about').style.display='none'
-  document.getElementById('home').style.display='none'
-  document.getElementById('logo').style.display='block'
+  if(window.innerWidth>768){
+    document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='none'
+    document.getElementById('home').style.display='none'
+    document.getElementById('logo').style.display='block'
+  }else{
+    document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='block'
+    document.getElementById('home').style.display='block'
+  }
+  
 }
 
 function aboutClicked(e){
   navClicked(e);
+  if(window.innerWidth>768){
   document.getElementById('works').style.display='none'
   document.getElementById('about').style.display='block'
   document.getElementById('home').style.display='none'
   document.getElementById('logo').style.display='block'
+  }else{
+    document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='block'
+    document.getElementById('home').style.display='block'
+  }
 }
 
 function homeClicked(e){
   navClicked(e);
+  if(window.innerWidth>768){
   document.getElementById('home').style.display='block'
   document.getElementById('works').style.display='none'
   document.getElementById('about').style.display='none'
   document.getElementById('logo').style.display='none'
+  }else{
+    document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='block'
+    document.getElementById('home').style.display='block'
+  }
   
 }
