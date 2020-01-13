@@ -460,7 +460,7 @@ header li a:hover {
     background: #14060F;
     text-align: center;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
   }
   .logo-mobile{
     width: 30%;
@@ -477,6 +477,16 @@ header li a:hover {
     width: 70%;
     text-align: center;
     font-family: 'Satisfy', cursive;
+  }
+  .mainPhrase .M-WD{
+    font-family: 'Fira Code', monospace;
+    /* color: #81CFE7; */
+    color: #bbb;
+    font-size: smaller;
+  }
+  .mainPhrase .M-GD{
+    /* color: #999; */
+    color: #bbb;
   }
     
   /* +++++++++ Works ++++++++++ */
@@ -614,11 +624,11 @@ header li a:hover {
 
 /* ++++++++ About +++++++++ */
 .about{
-  background: #111111;
+  background: #14060F;
   padding: 100px 5% 5%;
   text-align: center;
   display: none;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   letter-spacing: 1px;
   font-size: 1em;
 }
@@ -668,7 +678,35 @@ header li a:hover {
 }
 
 
+#stars1{
+  animation : stars 1s steps(40) 1s infinite normal both;
+}
 
+#stars2{
+  animation : stars 1s ease-in-out 0s infinite normal both;
+}
+
+@keyframes stars{
+  0%{
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+#mylogo{
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#Laptop{
+cursor: pointer;
+}
+#Laptop:hover #mylogo{
+  opacity: 1;
+}
 
 /* +++++++++ Media Queries +++++++++++++ */
 
@@ -739,7 +777,11 @@ header li a:hover {
     display: inline-block;
     padding-bottom: 50px;
   }
-  
+  header{
+    /* background: #32313a;
+    background: linear-gradient(90deg, #101721 0%, #12334B 100%);
+    border-color: #016C93; */
+  }
 }
 
 

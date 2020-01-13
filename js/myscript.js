@@ -186,6 +186,7 @@ function worksClicked(e){
   document.getElementById('works').style.display='block'
     document.getElementById('about').style.display='none'
     document.getElementById('home').style.display='none'
+    if(window.innerWidth>768)
     document.getElementById('logo').style.display='block'
   
 }
@@ -195,14 +196,15 @@ function aboutClicked(e){
   document.getElementById('works').style.display='none'
   document.getElementById('about').style.display='block'
   document.getElementById('home').style.display='none'
+  if(window.innerWidth>768)
   document.getElementById('logo').style.display='block'
 }
 
 function homeClicked(e){
   navClicked(e);
+  document.getElementById('home').style.display='block'
   document.getElementById('works').style.display='none'
-  document.getElementById('about').style.display='block'
-  document.getElementById('home').style.display='none'
-  document.getElementById('logo').style.display='block'
+  document.getElementById('about').style.display='none'
+  document.getElementById('logo').style.display='none'
   
 }
