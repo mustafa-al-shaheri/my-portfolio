@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function(){
     myLogo.style.width = winWidth/5.5 + 'px';
     myLogo.style.height = winWidth/5.5 + 'px';
     topLayer.style.width= winWidth/2 +  'px';
+    if(window.innerWidth<=768)
+    document.getElementById('logo').style.display='none'
   }
 
 

@@ -188,6 +188,7 @@ header li a:hover {
     display: inline-block;
   }
 
+  
 
   /* .image-cropper img {
   height: 100%;
@@ -504,6 +505,46 @@ header li a:hover {
     /* color: #999; */
     color: #bbb;
   }
+
+
+  
+
+#stars1{
+  animation : stars 1s steps(40) 1s infinite normal both;
+}
+
+#stars2{
+  animation : stars 1s ease-in-out 0s infinite normal both;
+}
+
+@keyframes stars{
+  0%{
+    opacity: 0.2;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.2;
+  }
+}
+#mylogo, #book1-L,#book2-L,#cup-L,#tablet-L_1_,#screen-L{
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#reflect-L{
+  display: none;
+}
+
+#Laptop{
+/*   cursor: pointer; */
+}
+#office:hover #mylogo,#office:hover #book1-L,#office:hover #book2-L,#office:hover #cup-L,#office:hover #tablet-L_1_,#office:hover #screen-L{
+  opacity: 1;
+}
+#office:hover #reflect-L{
+  display: block;
+}
     
   /* +++++++++ Works ++++++++++ */
 
@@ -693,36 +734,48 @@ header li a:hover {
   width: 80%;
 }
 
-
-#stars1{
-  animation : stars 1s steps(40) 1s infinite normal both;
+.additional-info{
+  width: 75%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: larger;
+}
+.additional-info h3{
+  color: #A9E5BB;
+  margin-bottom: -10px;
 }
 
-#stars2{
-  animation : stars 1s ease-in-out 0s infinite normal both;
+.academic img{
+  float: left;
+  width: 10%;
+  height: 100%;
+  margin-top: 15px;
+  margin-right: 5%;
+}
+.academic-content{
+  float: left;
+  width: 85%;
 }
 
-@keyframes stars{
-  0%{
-    opacity: 0.2;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0.2;
-  }
+.find-me{
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid white;
 }
-#mylogo{
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.for-chat{
+  display: inline-block;
 }
-#Laptop{
-cursor: pointer;
+.phone-email p{
+  display: inline-block;
 }
-#Laptop:hover #mylogo{
-  opacity: 1;
+.phone-email p:nth-child(1){
+  margin-right: 20px;
 }
+
+
+
+
 
 /* +++++++++ Media Queries +++++++++++++ */
 
@@ -798,8 +851,32 @@ cursor: pointer;
     background: linear-gradient(90deg, #101721 0%, #12334B 100%);
     border-color: #016C93; */
   }
+  .additional-info{
+    font-size: smaller;
+  }
+  .personal-photo{
+    width: 35%;
+  }
+  .phone-email p{
+    display: block;
+  }
+  .phone-email p:nth-child(1){
+    margin-right: 0;
+  }
 }
 
+@media screen and (max-width:576px) {
+  .home-mobile{
+    padding-bottom: 30px;
+  }
+  .about{
+    font-size: small;
+  }
+  
+  .main-info-content a img{
+    width: 30px;
+  }
+}
 
 
   /* ++++++++++++ SVG ++++++++++ */
@@ -885,62 +962,69 @@ cursor: pointer;
 #mobile-svg  .st47{fill:#0D141E;}
 #mobile-svg  .st48{fill:#0E151F;}
 #mobile-svg  .st49{fill:#0F1620;}
-#mobile-svg  .st50{fill:#1D2941;}
-#mobile-svg  .st51{opacity:0.1;fill:url(#SVGID_1_);}
-#mobile-svg  .st52{fill:#FCF8BA;}
-#mobile-svg  .st53{fill:#1D2843;}
-#mobile-svg  .st54{fill:#1C2944;}
-#mobile-svg  .st55{fill:#1B2A45;}
-#mobile-svg  .st56{fill:#1A2B45;}
-#mobile-svg  .st57{fill:#192C46;}
-#mobile-svg  .st58{fill:#182D47;}
-#mobile-svg  .st59{fill:#172E48;}
-#mobile-svg  .st60{fill:#162F48;}
-#mobile-svg  .st61{fill:#153049;}
-#mobile-svg  .st62{fill:#14314A;}
-#mobile-svg  .st63{fill:#13324B;}
-#mobile-svg  .st64{fill:#12334B;}
-#mobile-svg  .st65{fill:#11344C;}
-#mobile-svg  .st66{fill:#10354D;}
-#mobile-svg  .st67{fill:#0F364E;}
-#mobile-svg  .st68{fill:#0E384E;}
-#mobile-svg  .st69{fill:#0D394F;}
-#mobile-svg  .st70{fill:#0C3A50;}
-#mobile-svg  .st71{fill:#0B3B51;}
-#mobile-svg  .st72{fill:#0A3C51;}
-#mobile-svg  .st73{fill:#093D52;}
-#mobile-svg  .st74{fill:#083E53;}
-#mobile-svg  .st75{fill:#073F54;}
-#mobile-svg  .st76{fill:#064054;}
-#mobile-svg  .st77{fill:#054155;}
-#mobile-svg  .st78{fill:#044256;}
-#mobile-svg  .st79{fill:#034357;}
-#mobile-svg  .st80{fill:#024457;}
-#mobile-svg  .st81{fill:#014558;}
-#mobile-svg  .st82{fill:#004659;}
-#mobile-svg  .st83{fill:#016C93;}
-#mobile-svg  .st84{fill:url(#SVGID_2_);}
-#mobile-svg  .st85{fill:url(#SVGID_3_);}
-#mobile-svg  .st86{fill:#1D2941;stroke:#1C1C1C;stroke-width:0.5;stroke-miterlimit:10;}
-#mobile-svg  .st87{fill:url(#SVGID_4_);}
-#mobile-svg  .st88{fill:url(#SVGID_5_);stroke:#101721;stroke-miterlimit:10;}
-#mobile-svg  .st89{fill:#1D2941;stroke:#172230;stroke-miterlimit:10;}
-#mobile-svg  .st90{fill:url(#SVGID_6_);stroke:#101721;stroke-miterlimit:10;}
-#mobile-svg  .st91{fill:none;stroke:#101721;stroke-width:0.3;stroke-miterlimit:10;}
-#mobile-svg  .st92{opacity:0.5;}
-#mobile-svg  .st93{fill:url(#SVGID_7_);stroke:#101721;stroke-miterlimit:10;}
-#mobile-svg  .st94{fill:#755900;stroke:#172230;stroke-miterlimit:10;}
-#mobile-svg  .st95{fill:url(#SVGID_8_);stroke:#101721;stroke-miterlimit:10;}
-#mobile-svg  .st96{fill:none;stroke:#101721;stroke-width:3.4851;stroke-miterlimit:10;}
-#mobile-svg  .st97{fill:#303B47;}
-#mobile-svg  .st98{fill:#062A35;}
-#mobile-svg  .st99{fill:url(#SVGID_9_);}
-#mobile-svg  .st100{fill:url(#SVGID_10_);}
-#mobile-svg  .st101{fill:url(#SVGID_11_);}
-#mobile-svg  .st102{fill:#202C3A;}
-#mobile-svg  .st103{fill:url(#SVGID_12_);}
-#mobile-svg  .st104{fill:url(#SVGID_13_);}
-#mobile-svg  .st105{fill:url(#SVGID_14_);stroke:url(#SVGID_15_);stroke-width:7.8048;stroke-miterlimit:10;}
-#mobile-svg  .st106{fill:#4D4D4D;}
-#mobile-svg  .st107{fill:#737373;}
-#mobile-svg  .st108{fill:none;stroke:#4D4D4D;stroke-width:5.0347;stroke-miterlimit:10;}
+#mobile-svg  .st50{fill:none;stroke:#101721;stroke-width:3.4851;stroke-miterlimit:10;}
+#mobile-svg  .st51{fill:#303B47;}
+#mobile-svg  .st52{fill:#1D2941;}
+#mobile-svg  .st53{opacity:0.1;fill:url(#reflect-L_1_);}
+#mobile-svg  .st54{fill:#243754;}
+#mobile-svg  .st55{fill:#FCF8BA;}
+#mobile-svg  .st56{fill:#1D2843;}
+#mobile-svg  .st57{fill:#1C2944;}
+#mobile-svg  .st58{fill:#1B2A45;}
+#mobile-svg  .st59{fill:#1A2B45;}
+#mobile-svg  .st60{fill:#192C46;}
+#mobile-svg  .st61{fill:#182D47;}
+#mobile-svg  .st62{fill:#172E48;}
+#mobile-svg  .st63{fill:#162F48;}
+#mobile-svg  .st64{fill:#153049;}
+#mobile-svg  .st65{fill:#14314A;}
+#mobile-svg  .st66{fill:#13324B;}
+#mobile-svg  .st67{fill:#12334B;}
+#mobile-svg  .st68{fill:#11344C;}
+#mobile-svg  .st69{fill:#10354D;}
+#mobile-svg  .st70{fill:#0F364E;}
+#mobile-svg  .st71{fill:#0E384E;}
+#mobile-svg  .st72{fill:#0D394F;}
+#mobile-svg  .st73{fill:#0C3A50;}
+#mobile-svg  .st74{fill:#0B3B51;}
+#mobile-svg  .st75{fill:#0A3C51;}
+#mobile-svg  .st76{fill:#093D52;}
+#mobile-svg  .st77{fill:#083E53;}
+#mobile-svg  .st78{fill:#073F54;}
+#mobile-svg  .st79{fill:#064054;}
+#mobile-svg  .st80{fill:#054155;}
+#mobile-svg  .st81{fill:#044256;}
+#mobile-svg  .st82{fill:#034357;}
+#mobile-svg  .st83{fill:#024457;}
+#mobile-svg  .st84{fill:#014558;}
+#mobile-svg  .st85{fill:#004659;}
+#mobile-svg  .st86{fill:#00576B;}
+#mobile-svg  .st87{fill:#016C93;}
+#mobile-svg  .st88{fill:url(#SVGID_1_);}
+#mobile-svg  .st89{fill:url(#SVGID_2_);}
+#mobile-svg  .st90{fill:url(#cup-L_1_);}
+#mobile-svg  .st91{fill:#1D2941;stroke:#1C1C1C;stroke-width:0.5;stroke-miterlimit:10;}
+#mobile-svg  .st92{fill:url(#SVGID_3_);}
+#mobile-svg  .st93{fill:url(#SVGID_4_);stroke:#101721;stroke-miterlimit:10;}
+#mobile-svg  .st94{fill:#1D2941;stroke:#172230;stroke-miterlimit:10;}
+#mobile-svg  .st95{fill:url(#SVGID_5_);stroke:#101721;stroke-miterlimit:10;}
+#mobile-svg  .st96{fill:url(#book2-L_1_);stroke:#101721;stroke-miterlimit:10;}
+#mobile-svg  .st97{fill:none;stroke:#101721;stroke-width:0.3;stroke-miterlimit:10;}
+#mobile-svg  .st98{opacity:0.5;}
+#mobile-svg  .st99{fill:url(#SVGID_6_);stroke:#101721;stroke-miterlimit:10;}
+#mobile-svg  .st100{fill:#755900;stroke:#172230;stroke-miterlimit:10;}
+#mobile-svg  .st101{fill:url(#SVGID_7_);stroke:#101721;stroke-miterlimit:10;}
+#mobile-svg  .st102{fill:url(#book1-L_1_);stroke:#101721;stroke-miterlimit:10;}
+#mobile-svg  .st103{fill:#062A35;}
+#mobile-svg  .st104{fill:url(#SVGID_8_);}
+#mobile-svg  .st105{fill:url(#SVGID_9_);}
+#mobile-svg  .st106{fill:url(#SVGID_10_);}
+#mobile-svg  .st107{fill:url(#tablet-L_2_);}
+#mobile-svg  .st108{fill:url(#SVGID_11_);}
+#mobile-svg  .st109{fill:#202C3A;}
+#mobile-svg  .st110{fill:url(#SVGID_12_);}
+#mobile-svg  .st111{fill:url(#SVGID_13_);}
+#mobile-svg  .st112{fill:url(#SVGID_14_);stroke:url(#SVGID_15_);stroke-width:7.8048;stroke-miterlimit:10;}
+#mobile-svg  .st113{fill:#4D4D4D;}
+#mobile-svg  .st114{fill:#737373;}
+#mobile-svg  .st115{fill:none;stroke:#4D4D4D;stroke-width:5.0347;stroke-miterlimit:10;}
