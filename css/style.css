@@ -746,6 +746,7 @@ header li a:hover {
   margin-top: 15px;
   padding-bottom: 15px;
   border-bottom: 3px solid #B9C53A;
+  
 }
 .main-accounts img:hover{
   border-bottom: 3px solid white;
@@ -1023,3 +1024,10 @@ header li a:hover {
 #mobile-svg  .st113{fill:#4D4D4D;}
 #mobile-svg  .st114{fill:#737373;}
 #mobile-svg  .st115{fill:none;stroke:#4D4D4D;stroke-width:5.0347;stroke-miterlimit:10;}
+
+
+
+
+.about-body{
+  font-family: Arial, Helvetica, sans-serif;
+}
