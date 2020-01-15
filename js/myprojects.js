@@ -57,16 +57,27 @@ let addExpandAbility = function(){
     let projHeader = document.getElementsByClassName("proj-header");
 
     for (let i = 0; i < projHeader.length; i++) {
-    projHeader[i].addEventListener("click", function() {console.log(this.nextElementSibling)
+    projHeader[i].addEventListener("click", function() {
         //this.classList.toggle("active-proj");
         let content = this.nextElementSibling;
-        this.firstElementChild.classList.toggle("active-Proj");
+        
+        
         // expandDesc
         /* this.parentNode.classList.toggle("right")
         this.parentNode.classList.toggle("left") */
         if (content.offsetHeight){
         content.style.height = "0";
+        this.firstElementChild.classList.toggle("active-Proj");
+        this.classList.toggle("active-Proj-header");
         } else {
+            let activeProj = document.getElementsByClassName("active-Proj-header")
+            for(let k=0;k<activeProj.length;k++){
+                activeProj[k].nextElementSibling.style.height="0"
+                activeProj[k].firstElementChild.classList.toggle("active-Proj");
+                activeProj[k].classList.toggle("active-Proj-header");                
+            }
+        this.firstElementChild.classList.toggle("active-Proj");
+        this.classList.toggle("active-Proj-header");
         content.style.height = "auto";
         } 
         
