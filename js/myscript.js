@@ -3,7 +3,7 @@ let topLayer = wrapper.querySelector('.top');
 //let bottomLayer = wrapper.querySelector('.bottom')
 let handle = wrapper.querySelector('.handle');
 let myLogo = document.querySelector(".image-cropper")
-
+let winWidth = window.innerWidth;
 document.addEventListener('DOMContentLoaded', function(){
   
   /* wrapper.addEventListener('mousemove', function(e){
@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', function(){
     myLogo.style.width = winWidth/5.5 + 'px';
     myLogo.style.height = winWidth/5.5 + 'px';
     topLayer.style.width= winWidth/2 +  'px';
-
+    if(window.innerWidth<=768)
+    document.getElementById('logo').style.display='none'
   }
 
 
@@ -162,22 +163,7 @@ document.addEventListener('DOMContentLoaded', function(){
       el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
     } */
 
-let projHeader = document.getElementsByClassName("proj-header");
 
-for (let i = 0; i < projHeader.length; i++) {
-  projHeader[i].addEventListener("click", function() {
-    this.classList.toggle("active-proj");
-    let content = this.nextElementSibling;
-    if (content.offsetHeight){
-      content.style.height = "0";
-      if(window.innerWidth>=768)
-      this.parentNode.style.width='45%';
-    } else {
-      content.style.height = "auto";
-      this.parentNode.style.width='96%';
-    } 
-  });
-}
 
 function navClicked(e){
   let activated = document.getElementsByClassName('active');
@@ -189,22 +175,38 @@ function navClicked(e){
 
 function worksClicked(e){
   navClicked(e);
+  /* if(window.innerWidth>768){
+    document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='none'
+    document.getElementById('home').style.display='none'
+    document.getElementById('logo').style.display='block'
+  }else{
+    document.getElementById('works').style.display='block'
+    document.getElementById('about').style.display='block'
+    document.getElementById('home').style.display='block'
+  } */
   document.getElementById('works').style.display='block'
-  //document.getElementById('about').style.display='none'
-  document.getElementById('home').style.display='none'
-  document.getElementById('logo').style.display='block'
-
+    document.getElementById('about').style.display='none'
+    document.getElementById('home').style.display='none'
+    if(window.innerWidth>768)
+    document.getElementById('logo').style.display='block'
+  
 }
 
 function aboutClicked(e){
   navClicked(e);
-  
+  document.getElementById('works').style.display='none'
+  document.getElementById('about').style.display='block'
+  document.getElementById('home').style.display='none'
+  if(window.innerWidth>768)
+  document.getElementById('logo').style.display='block'
 }
 
 function homeClicked(e){
+  navClicked(e);
   document.getElementById('home').style.display='block'
   document.getElementById('works').style.display='none'
-  //document.getElementById('about').style.display='none'
+  document.getElementById('about').style.display='none'
   document.getElementById('logo').style.display='none'
   
 }
